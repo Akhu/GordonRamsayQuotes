@@ -10,7 +10,69 @@
 //@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 
+body, html {
+	height: 100%;
+}
 html {
 	background-color: $body-bg;
 	font-family: $font-family-sans-serif;
 }
+
+body {
+	margin: 0;
+
+	a {
+		color:#9b9b9b;
+	}
+}
+
+
+.app {
+	height: 85%;
+	padding:0;
+	margin:0;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+.content {
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+
+	.quote {
+		padding:40px;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	.sharing {
+		text-align: center;
+	}
+}
+
+header {
+	height: 5%;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+
+}
+
+footer {
+	height: 10%;
+	display: flex;
+	background-color: #F3F3F3;
+	align-items:center;
+	justify-content:space-around;
+	font-size: 10px;
+	color:#9B9B9B;
+
+	div:last-child{
+		display: flex;
+		justify-content:space-between;
+		flex:0.15;
+	}
+}
+

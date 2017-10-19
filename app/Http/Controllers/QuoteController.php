@@ -9,6 +9,7 @@ class QuoteController extends Controller
 {
 
     public function random(){
+        dd(session());
         
         return view('quote', ['quote' => Quote::inRandomOrder()->limit(1)->first()]);
     }

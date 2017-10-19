@@ -1,5 +1,99 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito:300,400);html {
+@import url(https://fonts.googleapis.com/css?family=Nunito:300,400);body,
+html {
+  height: 100%;
+}
+
+html {
   background-color: #f5f8fa;
   font-family: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+body a {
+  color: #9b9b9b;
+}
+
+.app {
+  height: 85%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .quote {
+  padding: 40px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.content .sharing {
+  text-align: center;
+}
+
+header {
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F3F3F3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 10px;
+  color: #9B9B9B;
+}
+
+footer div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0.15;
+      -ms-flex: 0.15;
+          flex: 0.15;
 }
 
