@@ -85,15 +85,7 @@ footer {
   color: #9B9B9B;
 }
 
-footer div:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 0.15;
-      -ms-flex: 0.15;
-          flex: 0.15;
+footer div:nth-child(2) {
+  width: 30%;
 }
 

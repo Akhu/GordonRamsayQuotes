@@ -47,8 +47,9 @@
             
         </div>
         <footer>
-            <div>This is not affiliated with Gordon Ramsay, I just like his way of managing people</div>
+            
             <div>Made with love by <a href="">@anthokhun</a></div>
+            <div>This is not affiliated with Gordon Ramsay, I just like his way of managing people</div>
             <div><a href="">Contact</a></div>
         </footer>
     </body>

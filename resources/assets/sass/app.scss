@@ -69,10 +69,18 @@ footer {
 	font-size: 10px;
 	color:#9B9B9B;
 
-	div:last-child{
-		display: flex;
-		justify-content:space-between;
-		flex:0.15;
+	div {
+			&:nth-child(2) {
+			
+			width: 30%;
+		}
 	}
+
+	// &:first-child,&:last-child {
+	// 	width: 30%;
+	// 	flex: 0 0 auto;
+	// }	
+	// }
+	
 }
 
