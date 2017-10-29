@@ -9,7 +9,7 @@ class QuoteController extends Controller
 {
 
     public function random(){
-        dd(session());
+
         
         return view('quote', ['quote' => Quote::inRandomOrder()->limit(1)->first()]);
     }
@@ -47,9 +47,13 @@ class QuoteController extends Controller
     public function store(Request $request)
     {
         //Batch creation 
-        /*
-            ["quote1","Quote2", "Quote3"]
-        */
+        $data = json_decode($request->getContent());
+        
+        foreach($data as $raw_quote){
+	        $newQuote = new Quote();
+	        $newQuote->content = $raw_quote;
+	        $newQuote->save();
+        }
 
         //@todo
     }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatingQuote extends Migration
+class CreateTestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreatingQuote extends Migration
      */
     public function up()
     {
-        Schema::table('quotes', function(Blueprint $table){
-            $table->string('content');
+        Schema::table('quotes', function (Blueprint $table) {
+            $table->timestamps();
         });
     }
 
@@ -25,6 +25,6 @@ class CreatingQuote extends Migration
      */
     public function down()
     {
-        //
+	    
     }
 }
