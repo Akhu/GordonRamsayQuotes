@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- OGs -->
+        <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+        <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="{{ $quote->content }}" />
+        <meta property="og:description"        content="How much does culture influence creative thinking?" />
+        <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
         
         <title>Quote</title>
 
@@ -15,32 +20,19 @@
     </head>
     <body>
         <header>
-            <a href="">gordonramsayquotes.com</a>
+            <a href="{{ url('/') }}">gordonramsayquotes.com</a>
         </header>
         <div class="app">
-            <!-- @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-                @endif -->
-
             <div class="content">
                 <div class="quote">
                     {{ $quote->content }}
                 </div>
 
-
                 <div class="sharing">
                     Spread the fucking good cooking.
                     <div class="links">
-                        <a href="">Share on Twitter</a>
-                        <a href="">Copy</a>
-                        <a href="">Share on Facebook</a>
+                        <a class="btn twitter" href="https://twitter.com/intent/tweet?text={{ $quote->content . " - Gordon Ramsay" }}&via=gordonramsayquotes.com">Share on Twitter</a>
+                        <a class="btn clipboard" onclick="copy('{{ $quote->content . " - Gordon Ramsay" }}')" href="">Copy</a>
                     </div>
                 </div>
             </div>

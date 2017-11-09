@@ -45,16 +45,22 @@ body a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 7%;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .content .quote {
   padding: 40px;
   text-align: center;
   font-size: 30px;
+  max-width: 90%;
 }
 
 .content .sharing {
   text-align: center;
+  margin-top: 3%;
 }
 
 header {
@@ -68,6 +74,39 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.btn {
+  background-color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.03), 0 2px 8px 0 rgba(0, 0, 0, 0.11);
+          box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.03), 0 2px 8px 0 rgba(0, 0, 0, 0.11);
+}
+
+.btn.twitter {
+  background-color: #5FD5FF;
+}
+
+.btn.clipboard {
+  background: #FF7593;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.03), 0 2px 8px 0 rgba(0, 0, 0, 0.11);
+          box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.03), 0 2px 8px 0 rgba(0, 0, 0, 0.11);
+}
+
+.links {
+  margin-top: 20px;
 }
 
 footer {

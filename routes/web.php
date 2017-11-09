@@ -13,6 +13,8 @@
 
 Route::get('/', 'QuoteController@random');
 
+Route::get('/{id}', 'QuoteController@uniqueQuote');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

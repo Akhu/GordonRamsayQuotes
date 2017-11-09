@@ -8,11 +8,24 @@ use Illuminate\Http\Request;
 class QuoteController extends Controller
 {
 
-    public function random(){
 
-        
-        return view('quote', ['quote' => Quote::inRandomOrder()->limit(1)->first()]);
+    public function random(){
+        $quote = Quote::inRandomOrder()->limit(1)->first();
+        return redirect('/' . $quote->getKey());
     }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function uniqueQuote($id){
+        $quote = Quote::find($id);
+        if(!$quote){
+            return redirect('/');
+        }
+        return view('quote', ['quote' => Quote::find($id)]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -66,7 +79,7 @@ class QuoteController extends Controller
      */
     public function show(Quote $quote)
     {
-        //
+        return view('quote', $quote);
     }
 
     /**
