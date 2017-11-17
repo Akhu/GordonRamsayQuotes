@@ -17,9 +17,9 @@ body a {
 }
 
 .app {
-  height: 85%;
   padding: 0;
   margin: 0;
+  margin-bottom: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +61,36 @@ body a {
 .content .sharing {
   text-align: center;
   margin-top: 3%;
+}
+
+.content .sharing .copy-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .content .sharing .copy-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .content .sharing .copy-mobile .input-copy {
+    border-radius: 20px;
+    -webkit-box-shadow: -1px 2px 12px rgba(0, 0, 0, 0.18);
+            box-shadow: -1px 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 10px;
+    margin-top: 7px;
+    border: none;
+  }
+
+  .content .sharing .clipboard {
+    display: none;
+  }
 }
 
 header {
@@ -109,22 +139,56 @@ header {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 375px) {
+  .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer {
   height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #F3F3F3;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 10px;
   color: #9B9B9B;
 }
 
+@media screen and (max-width: 375px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 20%;
+  }
+}
+
 footer div:nth-child(2) {
   width: 30%;
+}
+
+@media screen and (max-width: 375px) {
+  footer div:nth-child(2) {
+    text-align: center;
+    width: 80%;
+  }
 }
 
