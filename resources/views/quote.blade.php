@@ -13,11 +13,11 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- OGs -->
-    <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:url"                content="https://gordonramsayquotes.eu/{{ $quote->id }}" />
     <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="{{ $quote->content }}" />
-    <meta property="og:description"        content="How much does culture influence creative thinking?" />
-    <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+    <meta property="og:title"              content="Inspiring quote from Gordon" />
+    <meta property="og:description"        content="{{ $quote->content }}" />
+    <meta property="og:image"              content="https://gordonramsayquotes.eu/images/gordonOG.jpg" />
 
     <title>Quote</title>
 
@@ -38,8 +38,7 @@
             <div class="sharing">
                 Spread the fucking good cooking.
                 <div class="links">
-                    <a class="btn twitter" href="https://twitter.com/intent/tweet?text={{ $quote->content . " - Gordon Ramsay" }}&url=https://gordonramsayquotes.eu&hashtags=quote">Share on Twitter</a>
-                    <a class="btn clipboard" id="copy-button">Copy</a>
+                    <a class="btn twitter" href="https://twitter.com/intent/tweet?text={{ $quote->content . " - Gordon Ramsay" }}&url=https://gordonramsayquotes.eu/{{ $quote->id}}&hashtags=quote">Share on Twitter</a>
                     <div class="copy-mobile">
                         <span>Select and copy to share</span>
                         <input type="text" value="{{ url('/' . $quote->id) }}" class="input-copy"/>
@@ -49,30 +48,11 @@
         </div>
     </div>
     <footer>
-        <div>Made with love by <a href="">@anthokhun</a></div>
+        <div>Made with love by <a href="https://twitter.com/anthokhun">@anthokhun</a></div>
         <div>This is not affiliated with Gordon Ramsay, I just like his way of managing people</div>
-        <div><a href="">Contact</a></div>
+        <div><a href="mailto:me@anthony-dacruz.com?Subject=I%20have%20a%20quote%20suggestion%20%21%20Or%20just%20want%20to%20say%20Hi%20%21">Contact</a></div>
     </footer>
     <script>
-            var toCopy = document.getElementById("quote-content"),
-                btnCopy = document.getElementById("copy-button");
-
-            btnCopy.addEventListener('click', function(event){
-                event.preventDefault(); 
-                var range = document.createRange();
-                range.selectNode(toCopy);
-                window.getSelection().addRange(range);
-
-                try {
-                    var sucess = document.execCommand('copy');
-                    var msg = successful ? 'successful' : 'unsuccessful';
-                    console.log('Copying text command was ' + msg);
-                  } catch (err) {
-                    console.log('Oops, unable to copy');
-                  }
-                return false;
-            })
-
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
